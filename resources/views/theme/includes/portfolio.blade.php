@@ -41,11 +41,7 @@
                                     <div class="single-portfolio">
                                         <div class="portfolio-head overlay">
                                             <img src="{{asset($p->image)}}" alt="#">
-                                            <a class="more" href="portfolio-single.html"><i class="fa fa-long-arrow-left"></i></a>
-                                        </div>
-                                        <div class="portfolio-content">
-                                            <h4><a href="portfolio-single.html">بازاریابی خلاق</a></h4>
-                                            <p>مارک ، مشاوره</p>
+                                            <a class="more" href="#"><i class="fa fa-long-arrow-left"></i></a>
                                         </div>
                                     </div>
                                     <!--/ End Single Portfolio -->

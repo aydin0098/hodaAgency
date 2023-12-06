@@ -37,4 +37,10 @@
 
     <link rel="stylesheet" href="#" id="elena_custom">
 
+    <style>
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(245,130,32,0.2);
+        }
+    </style>
+
 </head>

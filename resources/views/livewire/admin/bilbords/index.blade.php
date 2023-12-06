@@ -14,39 +14,56 @@
                                             @include('errors.error')
                                             <form wire:submit.prevent="store" enctype="multipart/form-data">
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail111">عنوان خدمات:</label>
-                                                    <input type="text" wire:model.lazy="title"
-                                                           class="form-control" id="exampleInputEmail111">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail111">دسته والد:</label>
-                                                    <select wire:model.lazy="parent_id" class="form-control">
+                                                    <label for="exampleInputEmail111">نوع سازه:</label>
+                                                    <select wire:model.lazy="service_id" class="form-control">
                                                         <option value="">--انتخاب کنید--</option>
-                                                        @foreach(\App\Models\Service::all() as $s)
+                                                        @foreach($services as $s)
                                                             <option value="{{$s->id}}">{{$s->title}}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail111">مکان نمایش:</label>
-                                                    <select wire:model.lazy="import" class="form-control">
-                                                        <option value="1">خدمات اصلی</option>
-                                                        <option value="2">سایر خدمات</option>
+                                                    <label for="exampleInputEmail111">استان:</label>
+                                                    <select wire:model.lazy="province_id" class="form-control">
+                                                        <option value="">--انتخاب کنید--</option>
+                                                        @foreach($provinces as $s)
+                                                            <option value="{{$s->id}}">{{$s->name}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="file" class="form-control" id="image" wire:model="image">
-                                                    <span class="mt-2 text-danger" wire:loading wire:target="image">درحال اپلود عکس ...</span>
-                                                    <div wire:ignore id="progressbar" style="display: none"
-                                                         class="progress mb-20">
-                                                        <div class="progress-bar progress-bar-striped"
-                                                             role="progressbar" style="width: 0%;"
-                                                             aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%
-                                                        </div>
-                                                    </div>
-                                                    @if($image)
-                                                        <img src="{{$image->temporaryUrl()}}" class="form-control">
-                                                    @endif
+                                                    <label for="exampleInputEmail111">شهر:</label>
+                                                    <select wire:model.lazy="city_id" class="form-control">
+                                                        <option value="">--انتخاب کنید--</option>
+                                                        @foreach($cities as $s)
+                                                            <option value="{{$s->id}}">{{$s->name}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail111">آدرس:</label>
+                                                    <input type="text" wire:model.lazy="address"
+                                                           class="form-control" id="exampleInputEmail111">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail111">طول:</label>
+                                                    <input type="text" wire:model.lazy="width"
+                                                           class="form-control" id="exampleInputEmail111">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail111">ارتفاع:</label>
+                                                    <input type="text" wire:model.lazy="height"
+                                                           class="form-control" id="exampleInputEmail111">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail111">متراژ:</label>
+                                                    <input type="text" wire:model.lazy="meterage"
+                                                           class="form-control" id="exampleInputEmail111">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail111">قیمت:</label>
+                                                    <input type="text" wire:model.lazy="price"
+                                                           class="form-control" id="exampleInputEmail111">
                                                 </div>
                                                 <button type="submit"
                                                         class="btn btn-outline-success mb-2 mr-2" style="float:left;">
@@ -61,7 +78,7 @@
                             <div class="col-12 col-lg-8 box-margin">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title mb-2">لیست خدمات</h4>
+                                        <h4 class="card-title mb-2">لیست قیمت رسانه محیطی</h4>
                                         <hr>
                                     </div>
                                     <div class="col-sm-12">
@@ -79,32 +96,37 @@
                                                class="table table-striped dt-responsive nowrap w-100" style="width: 686px;">
                                             <thead>
                                             <tr role="row">
-                                                <th class="sorting_asc">عنوان خدمات</th>
-                                                <th class="sorting">تصویر</th>
-                                                <th class="sorting">دسته والد</th>
-                                                <th class="sorting">مکان نمایش</th>
+                                                <th class="sorting_asc">نوع سازه</th>
+                                                <th class="sorting">ادرس</th>
+                                                <th class="sorting">استان</th>
+                                                <th class="sorting">شهر</th>
+                                                <th class="sorting">طول</th>
+                                                <th class="sorting">عرض</th>
+                                                <th class="sorting">متراژ</th>
+                                                <th class="sorting">قیمت</th>
                                                 <th class="sorting">عملیات</th>
                                             </tr>
                                             </thead>
                                             @if($readyToLoad)
                                                 <tbody>
 
-                                                @foreach($services as $service)
+                                                @foreach($prices as $p)
                                                     <tr role="row" class="odd">
-                                                        <td>{{$service->title}}</td>
-                                                        <td tabindex="0" class="sorting_1">
-                                                            <img src="{{asset($service->image)}}"
-                                                                 style="width: 50px">
-                                                        </td>
-                                                        <td>{{$service->parent_id}}</td>
-                                                        <td>{{$service->import}}</td>
+                                                        <td>{{$p->services->title}}</td>
+                                                        <td>{{$p->address}}</td>
+                                                        <td>{{$p->provinces->name}}</td>
+                                                        <td>{{$p->cities->name}}</td>
+                                                        <td>{{$p->width}}</td>
+                                                        <td>{{$p->height}}</td>
+                                                        <td>{{$p->meterage}}</td>
+                                                        <td>{{$p->price}}</td>
                                                         <td>
-                                                            <a href="{{route('service.edit',$service->id)}}"
+                                                            <a href="{{route('price.edit',$p->id)}}"
                                                                class="action-icon">
                                                                 <i class="zmdi zmdi-edit zmdi-custom"></i>
                                                             </a>
                                                             <a href="javascript:void(0);"
-                                                               wire:click="deleteId({{$service->id}})"
+                                                               wire:click="deleteId({{$p->id}})"
                                                                data-toggle="modal"
                                                                data-target="#exampleModal"
                                                                class="action-icon">
@@ -113,7 +135,7 @@
                                                         </td>
                                                     </tr>
                                                 @endforeach
-                                                {{$services->links()}}
+                                                {{$prices->links()}}
                                                 </tbody>
                                             @else
                                                 <div class="alert alert-warning">

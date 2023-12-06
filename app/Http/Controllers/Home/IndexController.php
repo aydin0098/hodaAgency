@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Portfolio;
 use App\Models\Service;
@@ -18,5 +19,23 @@ class IndexController extends Controller
         $categories = Category::all();
         $portfolios = Portfolio::all();
         return view('theme.index',compact('sliders','imService','categories','portfolios'));
+    }
+
+    public function blog()
+    {
+        return view('theme.blog.index');
+
+    }
+
+    public function aboutUs()
+    {
+        return view('theme.about');
+
+    }
+
+    public function contactUs()
+    {
+        return view('theme.contact');
+
     }
 }

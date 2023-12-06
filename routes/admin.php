@@ -25,3 +25,6 @@ Route::get('/categories/{category}/edit', \App\Http\Livewire\Admin\Categories\Ed
 //portfolios
 Route::get('/portfolios', \App\Http\Livewire\Admin\Portfolios\Index::class)->name('portfolio.index');
 Route::get('/portfolios/{portfolio}/edit', \App\Http\Livewire\Admin\Portfolios\Edit::class)->name('portfolio.edit');
+// Bilboards Price
+Route::get('/bilboards/prices',App\Http\Livewire\Admin\Bilbords\Index::class)->name('bilboard.index');
+Route::get('/bilboards/{price}/edit',App\Http\Livewire\Admin\Bilbords\Edit::class)->name('price.edit');

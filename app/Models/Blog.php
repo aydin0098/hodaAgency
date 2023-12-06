@@ -6,17 +6,13 @@ use App\Models\Bilboard\Price;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class Blog extends Model
 {
     use HasFactory;
+    protected $table = 'blogs';
     protected $guarded = false;
 
 
-    public function items()
-    {
-        return $this->hasMany(Service::class,'parent_id');
-
-    }
 
 
 }

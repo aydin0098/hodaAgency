@@ -37,7 +37,7 @@ class Index extends Component
 
     protected $rules = [
         'title' => 'required',
-        'image' => 'required',
+        'image' => 'nullable',
         'import' => 'nullable',
         'parent_id' => 'nullable',
     ];
@@ -49,7 +49,7 @@ class Index extends Component
             'title'    => $this->title ,
             'import'     => $this->import,
             'parent_id'     => $this->parent_id,
-            'image' => uploadImage('services',$this->image)
+            'image' => $this->image ? uploadImage('services',$this->image) : null
         ]);
         $this->resetForm();
 

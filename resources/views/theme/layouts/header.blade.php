@@ -12,7 +12,7 @@
                                     <!-- Image Logo -->
                                     <div class="img-logo">
                                         <a href="#">
-                                            <img src="img/logo.png" alt="#">
+                                            <img src="{{asset('home/img/logo.png')}}" alt="#">
                                         </a>
                                     </div>
                                 </div>
@@ -30,18 +30,18 @@
                                                         <li><a href="#">خانه</a></li>
                                                         <li class="icon-active"><a href="#">خدمات ما</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="bilboard.html">رسانه محیطی</a></li>
-                                                                <li><a href="tv.html">تبلیغات صدا و سیما</a></li>
-                                                                <li><a href="metro.html">تبلیغات مترو</a></li>
+                                                                <li><a href="{{route('area.index')}}">رسانه محیطی</a></li>
+                                                                <li><a href="{{route('tv.index')}}">تبلیغات صدا و سیما</a></li>
+                                                                <li><a href="{{route('metro.index')}}">تبلیغات مترو</a></li>
                                                                 <li><a href="#">دیجیتال مارکتینگ</a></li>
                                                                 <li><a href="#">بازاریابی و تحقیقات بازار</a></li>
                                                                 <li><a href="#">برندسازی 360</a></li>
 
                                                             </ul>
                                                         </li>
-                                                        <li><a href="blog.html">وبلاگ</a></li>
-                                                        <li><a href="contact.html">تماس با ما</a></li>
-                                                        <li><a href="about.html"> درباره ما</a></li>
+                                                        <li><a href="{{route('home.blog')}}">وبلاگ</a></li>
+                                                        <li><a href="{{route('home.contact')}}">تماس با ما</a></li>
+                                                        <li><a href="{{route('home.about')}}"> درباره ما</a></li>
                                                     </ul>
                                                     <!--/ End Naviagiton -->
                                                 </div>
