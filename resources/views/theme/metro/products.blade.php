@@ -28,11 +28,11 @@
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
                     <div class="section-title default text-center">
                         <div class="section-top">
-                            <h1><b>{{$line->line}}</b></h1>
+                            <h1><b>{{$station->title}}</b></h1>
                         </div>
                         <div class="section-bottom">
                             <div class="text">
-                                <p class="text-center">برای استعلام قیمت لطفا ایستگاه خود را انخاب کنید .</p>
+                                <p class="text-center">برای استعلام قیمت لطفا نوع خدمات خود را انخاب کنید .</p>
                             </div>
                         </div>
                     </div>
@@ -50,30 +50,30 @@
                     </thead>
                     <tbody>
 
-                        <tr>
-                            <td>تابلوهای الیت باکس</td>
-                            <td>A+</td>
-                            <td>85000</td>
+                    <tr>
+                        <td>تابلوهای الیت باکس</td>
+                        <td>A+</td>
+                        <td>85000</td>
 
-                        </tr>
-                        <tr>
-                            <td>تابلوهای الیت باکس</td>
-                            <td>A+</td>
-                            <td>85000</td>
+                    </tr>
+                    <tr>
+                        <td>تابلوهای الیت باکس</td>
+                        <td>A+</td>
+                        <td>85000</td>
 
-                        </tr>
-                        <tr>
-                            <td>تابلوهای الیت باکس</td>
-                            <td>A+</td>
-                            <td>85000</td>
+                    </tr>
+                    <tr>
+                        <td>تابلوهای الیت باکس</td>
+                        <td>A+</td>
+                        <td>85000</td>
 
-                        </tr>
-                        <tr>
-                            <td>تابلوهای الیت باکس</td>
-                            <td>A+</td>
-                            <td>85000</td>
+                    </tr>
+                    <tr>
+                        <td>تابلوهای الیت باکس</td>
+                        <td>A+</td>
+                        <td>85000</td>
 
-                        </tr>
+                    </tr>
 
                     </tbody>
 
@@ -88,14 +88,14 @@
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
                     <div class="section-title default text-center">
                         <div class="section-top">
-                            <h1><b>گرید بندی ایستگاه های {{$line->title}}</b></h1>
+                            <h1><b>قیمت ایستگاه {{$station->title}}</b></h1>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                @foreach($stations as $p)
-                    <div class="col-lg-4 col-md-6 col">
+                @foreach($products as $p)
+                    <div onclick="getPrice(event,{{$p->id}})" id="productItem" data-id="{{$p->id}}" class="col-lg-4 col-md-6 col">
                         <div class="blog-latest">
                             <div class="single-slider">
                                 <!-- Single Blog -->
@@ -107,7 +107,7 @@
                                         <div class="news-content">
                                             <h3 class="news-title"><a href="#">{{$p->title}}</a></h3>
                                             <div class="news-text">
-                                                <a style="padding: 7px 6px" href="{{route('metro.products',$p->id)}}" class="bizwheel-btn"><i class="fa fa-angle-left"></i>لیست قیمت</a>
+                                                <a style="padding: 7px 6px" href="{{route('metro.price',['station' => $station->id,'product'=>$p->id])}}" class="bizwheel-btn"><i class="fa fa-angle-left"></i>لیست قیمت</a>
                                             </div>
                                         </div>
                                     </div>
@@ -138,4 +138,30 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('scripts')
+    <script>
+        function getPrice(event,product)
+        {
+            event.preventDefault();
+
+            console.log(product);
+
+            // $.ajax({
+            //     url: '/services/metro/' + station+'/'+product+'/price',
+            //     method: 'GET',
+            //     success:function (data)
+            //     {
+            //         console.log(data);
+            //     },error:function ()
+            //     {
+            //         console.log('error')
+            //     }
+            // })
+
+
+        }
+
+    </script>
 @endsection

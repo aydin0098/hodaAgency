@@ -29,5 +29,6 @@ Route::get('/services/tv/{category}/{network}/prices',[\App\Http\Controllers\Hom
 //Metro
 Route::get('/services/metro',[\App\Http\Controllers\Home\MetroController::class,'lines'])->name('metro.index');
 Route::get('/services/metro/{line}/stations',[\App\Http\Controllers\Home\MetroController::class,'stations'])->name('metro.station');
-Route::get('/services/metro/{line}/{station}/products',[\App\Http\Controllers\Home\MetroController::class,'prices'])->name('metro.prices');
-Route::get('/services/metro/{station}/{price}/prices',[\App\Http\Controllers\Home\MetroController::class,'prices'])->name('metro.p');
+Route::get('/services/metro/{station}/products',[\App\Http\Controllers\Home\MetroController::class,'products'])->name('metro.products');
+Route::get('/services/metro/{station}/{product}/price',[\App\Http\Controllers\Home\MetroController::class,'price'])->name('metro.price');
+

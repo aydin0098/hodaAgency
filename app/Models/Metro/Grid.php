@@ -7,19 +7,12 @@ use App\Models\Tv\Network;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Price extends Model
+class Grid extends Model
 {
     use HasFactory;
-    protected $table = 'prices';
+    protected $table = 'grids';
     protected $connection = 'mysql_metro';
     protected $guarded = false;
-
-
-    public function stations()
-    {
-        return $this->belongsTo(Station::class,'station_id');
-
-    }
 
 
 

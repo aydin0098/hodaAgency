@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="t-content">
                                         <div class="content-inner">
-                                            <h4 class="name"><a href="#">{{$b->line}}</a></h4>
+                                            <h4 class="name"><a href="#">{{$b->title}}</a></h4>
                                             <a class="btn" href="{{route('metro.station',$b->id)}}"><i class="fa fa-arrow-circle-o-left"></i>مشاهده ایستگاه ها</a>
                                         </div>
                                     </div>
