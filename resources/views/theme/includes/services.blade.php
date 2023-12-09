@@ -20,7 +20,7 @@
                 <div class="single-service">
                     <div class="service-head">
                         <div class="icon-bg"><i class="fa fa-handshake-o"></i></div>
-                        <img src="img/services/service-01.jpg" alt="#">
+                        <img src="{{asset('home/img/services/service-01.jpg')}}" alt="#">
                     </div>
                     <div class="service-content">
                         <h4><a href="">آتلیه گرافیک</a></h4>
@@ -35,7 +35,7 @@
                 <div class="single-service">
                     <div class="service-head">
                         <div class="icon-bg"><i class="fa fa-handshake-o"></i></div>
-                        <img src="img/services/service-01.jpg" alt="#">
+                        <img src="{{asset('home/img/services/service-01.jpg')}}" alt="#">
                     </div>
                     <div class="service-content">
                         <h4><a href="">استراتژی و خلاقیت</a></h4>
@@ -50,7 +50,7 @@
                 <div class="single-service">
                     <div class="service-head">
                         <div class="icon-bg"><i class="fa fa-handshake-o"></i></div>
-                        <img src="img/services/service-01.jpg" alt="#">
+                        <img src="{{asset('home/img/services/service-01.jpg')}}" alt="#">
                     </div>
                     <div class="service-content">
                         <h4><a href="">ساخت و ساز های فلزی</a></h4>
@@ -65,7 +65,7 @@
                 <div class="single-service">
                     <div class="service-head">
                         <div class="icon-bg"><i class="fa fa-handshake-o"></i></div>
-                        <img src="img/services/service-01.jpg" alt="#">
+                        <img src="{{asset('home/img/services/service-01.jpg')}}" alt="#">
                     </div>
                     <div class="service-content">
                         <h4><a href="">دفتر مجازی</a></h4>

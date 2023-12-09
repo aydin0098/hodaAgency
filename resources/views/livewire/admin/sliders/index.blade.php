@@ -120,7 +120,7 @@
                     </div>
 
                 </div> <!-- end card body-->
-{{--                @include('livewire.admin.include.modal')--}}
+                @include('livewire.admin.include.modal')
             </div> <!-- end card -->
         </div>
     </div>

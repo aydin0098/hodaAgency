@@ -11,7 +11,7 @@
                                 <div class="logo">
                                     <!-- Image Logo -->
                                     <div class="img-logo">
-                                        <a href="#">
+                                        <a href="{{route('home.index')}}">
                                             <img src="{{asset('home/img/logo.png')}}" alt="#">
                                         </a>
                                     </div>
@@ -27,7 +27,7 @@
                                                 <div class="menu-home-menu-container">
                                                     <!-- Naviagiton -->
                                                     <ul id="nav" class="nav main-menu menu navbar-nav">
-                                                        <li><a href="#">خانه</a></li>
+                                                        <li><a href="{{route('home.index')}}">خانه</a></li>
                                                         <li class="icon-active"><a href="#">خدمات ما</a>
                                                             <ul class="sub-menu">
                                                                 <li><a href="{{route('area.index')}}">رسانه محیطی</a></li>

@@ -8,10 +8,10 @@
                         <div class="icon-head">
                             <img src="{{asset($s->image)}}">
                         </div>
-                        <h4><a href="#">{{$s->title}}</a></h4>
+                        <h4><a href="{{$s->slug}}">{{$s->title}}</a></h4>
                         <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
                         <div class="button">
-                            <a href="#" class="bizwheel-btn"><i class="fa fa-arrow-circle-o-left"></i>بیشتر بدانید</a>
+                            <a href="{{$s->slug}}" class="bizwheel-btn"><i class="fa fa-arrow-circle-o-left"></i>بیشتر بدانید</a>
                         </div>
                     </div>
                     <!--/ End Single Feature -->

@@ -30,23 +30,21 @@
                     <!-- About Video -->
                     <div class="modern-img-feature">
                         <img src="{{asset('home/img/about-us.jpg')}}" alt="#">
-                        <div class="video-play">
-                            <a href="https://www.youtube.com/watch?v=RLlPLqrw8Q4" class="video video-popup mfp-iframe">
-                                <i class="fa fa-play"></i>
-                            </a>
-                        </div>
                     </div>
                     <!--/End About Video  -->
                 </div>
                 <div class="col-lg-5 col-md-6 col-12">
                     <div class="about-content section-title default text-left">
                         <div class="section-top">
-                            <h1><span>درباره ما</span><b>ما راه حل تجاری و تجاری با کیفیت ارائه می دهیم</b></h1>
+                            <h1><span>درباره ما</span><b>کانون تبلیغاتی هدی</b></h1>
                         </div>
                         <div class="section-bottom">
                             <div class="text">
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+                                <p>
+                                <p>
+                                    کانون آگهی و تبلیغات هدی سازمانی خلاق و پویا در حوزه برندینگ، تبلیغات و ارئه راهکار های مناسب برای بازاریابی و فروش با مجوز رسمی از وزارت فرهنگ و ارشاد اسلامی یک آژانس تبلیغاتی جامع می باشد .
+
+                                </p>
                             </div>
 {{--                            <div class="button">--}}
 {{--                                <a href="#" class="bizwheel-btn theme-2">نمونه کار های ما<i class="fa fa-angle-left"></i></a>--}}

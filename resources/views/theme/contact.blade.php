@@ -9,8 +9,8 @@
                         <!-- Bread Menu -->
                         <div class="bread-menu">
                             <ul>
-                                <li><a href="index.html">خانه</a></li>
-                                <li><a href="contact.html">تماس با ما</a></li>
+                                <li><a href="#">خانه</a></li>
+                                <li><a href="#">تماس با ما</a></li>
                             </ul>
                         </div>
                         <!-- Bread Title -->
@@ -80,38 +80,40 @@
                     <div class="contact-box-main m-top-30">
                         <div class="contact-title">
                             <h2>با ما تماس بگیرید</h2>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+                            <p>
+                            <p>کانون آگهی و تبلیغات هدی سازمانی خلاق و پویا در حوزه برندینگ، تبلیغات و ارئه راهکار های مناسب برای بازاریابی و فروش با مجوز رسمی از وزارت فرهنگ و ارشاد اسلامی یک آژانس تبلیغاتی جامع می باشد .
+                            </p>
                         </div>
                         <!-- Single Contact -->
                         <div class="single-contact-box">
                             <div class="c-icon"><i class="fa fa-clock-o"></i></div>
                             <div class="c-text">
                                 <h4>ساعت کار</h4>
-                                <p>جمعه - شنبه<br>08 صبح - 10 شب (هر روز)</p>
+                                <p>جمعه - شنبه<br>08 صبح - 6 شب (هر روز)</p>
                             </div>
                         </div>
                         <!--/ End Single Contact -->
                         <!-- Single Contact -->
-                        <div class="single-contact-box">
+                        <div class="single-contact-box" >
                             <div class="c-icon"><i class="fa fa-phone"></i></div>
                             <div class="c-text">
                                 <h4>اکنون با ما تماس بگیرید</h4>
-                                <p>تلفن:888 765 4321<br> موبایل: 09162352632</p>
+                                <p>تلفن:02638586000<br> موبایل: 09162352632</p>
                             </div>
                         </div>
                         <!--/ End Single Contact -->
                         <!-- Single Contact -->
-                        <div class="single-contact-box">
+                        <div class="single-contact-box" style="display: flex;align-items: center">
                             <div class="c-icon"><i class="fa fa-envelope-o"></i></div>
-                            <div class="c-text">
-                                <h4>ایمیل</h4>
-                                <p>setinco@gmail.com<br>setinco@gmail.com</p>
+                            <div class="c-text d-flex">
+                                <h4 style="margin-left: 15px">ایمیل :</h4>
+                                <p>alireza.vishi@gmail.com<br></p>
                             </div>
                         </div>
                         <!--/ End Single Contact -->
-                        <div class="button">
-                            <a href="#" class="bizwheel-btn theme-1">آثار ما<i class="fa fa-angle-right"></i></a>
-                        </div>
+{{--                        <div class="button">--}}
+{{--                            <a href="#" class="bizwheel-btn theme-1">آثار ما<i class="fa fa-angle-right"></i></a>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
